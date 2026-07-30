@@ -1,0 +1,542 @@
+*{
+    
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+body {
+
+    background: #050816;
+
+    font-family: Inter, sans-serif;
+
+    color: white;
+
+    overflow-x: hidden;
+
+}
+/* mouse style */
+body{
+    cursor:none;
+}
+
+.cursor-dot{
+    position:fixed;
+    width:8px;
+    height:8px;
+    background:#ff3300;
+    border-radius:50%;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    z-index:99999;
+}
+
+.cursor-outline{
+    position:fixed;
+    width:40px;
+    height:40px;
+    border:2px solid #ff3300;
+    border-radius:50%;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    z-index:99998;
+}
+
+/* Background */
+
+.bg-blur {
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    opacity: .45;
+
+    z-index: -1;
+
+}
+
+.blur1 {
+
+    width: 400px;
+
+    height: 400px;
+
+    background: #6d28d9;
+
+    top: -100px;
+
+    left: -100px;
+
+}
+
+.blur2 {
+
+    width: 350px;
+
+    height: 350px;
+
+    background: #ff3300;
+
+    right: -80px;
+
+    bottom: -50px;
+
+}
+
+/* Hero */
+
+.hero {
+    margin-top: 100px;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 8%;
+
+}
+
+.left {
+
+    width: 52%;
+
+}
+
+.hello {
+
+    font-size: 20px;
+
+    margin-bottom: 20px;
+
+    color: #ca8979;
+
+}
+
+h1 {
+
+    font-size: 70px;
+
+    font-family: 'Space Grotesk', sans-serif;
+
+    line-height: 1.1;
+
+    margin-bottom: 20px;
+
+}
+
+h1 span {
+
+    color: #ff3300;
+
+}
+
+h2 {
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+
+    height: 45px;
+
+    color: #ffff;
+
+}
+
+.description {
+
+    font-size: 19px;
+
+    line-height: 1.9;
+
+    color: #cbd5e1;
+
+    max-width: 650px;
+
+}
+
+.buttons {
+
+    margin-top: 45px;
+
+    display: flex;
+
+    gap: 20px;
+
+}
+.primary{
+
+padding:18px 38px;
+
+background:#a73316;
+
+color:#111;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:700;
+
+transition:.3s;
+
+position:relative;
+
+overflow:hidden;
+}
+.primary:hover{
+ color: #ffffff;
+}
+
+.primary::before{
+
+content:"";
+
+position:absolute;
+
+width:0;
+
+height:0;
+
+left:var(--x);
+
+top:var(--y);
+
+background:rgba(252, 59, 0, 0.562);
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+transition:.45s;
+
+}
+
+.primary:hover::before{
+
+width:320px;
+
+height:320px;
+color: #ffffff;
+
+}
+
+.secondary {
+
+    padding: 18px 38px;
+
+    border: 2px solid #ff3300;
+
+    border-radius: 50px;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: .3s;
+
+}
+
+.secondary:hover {
+
+    background: #ff3300;
+
+    color: #111;
+    font-weight: 600;
+
+}
+
+.social {
+
+    margin-top: 60px;
+
+    display: flex;
+
+    gap: 22px;
+
+}
+
+.social a {
+
+    font-size: 26px;
+
+    color: white;
+
+    transition: .3s;
+
+}
+
+.social a:hover {
+
+    color: #ff3300;
+
+    transform: translateY(-5px);
+
+}
+
+.right {
+
+    width: 40%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.glass-card {
+
+    width: 450px;
+
+    height: 520px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, .05);
+
+    backdrop-filter: blur(20px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    box-shadow: 0 0 60px rgba(0, 212, 255, .15);
+
+    animation: float 5s ease-in-out infinite;
+
+}
+
+.glass-card img {
+
+    width: 80%;
+
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-20px);
+
+    }
+
+}
+
+/* ===========================
+        LAPTOP
+=========================== */
+
+@media(max-width:1200px){
+
+h1{
+
+font-size:60px;
+
+}
+
+.glass-card{
+
+width:380px;
+
+height:450px;
+
+}
+
+}
+
+/* ===========================
+        TABLET
+=========================== */
+
+@media(max-width:992px){
+
+.hero{
+
+flex-direction:column-reverse;
+
+justify-content:center;
+
+text-align:center;
+
+padding-top:130px;
+
+}
+
+.left{
+
+width:100%;
+
+}
+
+.right{
+
+width:100%;
+
+margin-bottom:60px;
+
+}
+
+.glass-card{
+
+width:350px;
+
+height:400px;
+
+}
+
+.description{
+
+margin:auto;
+
+}
+
+.buttons{
+
+justify-content:center;
+
+}
+
+.social{
+
+justify-content:center;
+
+}
+
+h1{
+
+font-size:52px;
+
+}
+
+}
+
+/* ===========================
+        MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.hero{
+
+padding:130px 25px 60px;
+
+}
+
+h1{
+
+font-size:42px;
+
+}
+
+h2{
+
+font-size:25px;
+
+}
+
+.description{
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.primary,
+
+.secondary{
+
+width:220px;
+
+text-align:center;
+
+}
+
+.glass-card{
+
+width:300px;
+
+height:350px;
+
+}
+
+.glass-card img{
+
+width:85%;
+
+}
+
+}
+
+/* ===========================
+      SMALL PHONE
+=========================== */
+
+@media(max-width:480px){
+
+h1{
+
+font-size:34px;
+
+}
+
+h2{
+
+font-size:22px;
+
+}
+
+.description{
+
+font-size:16px;
+
+}
+
+.glass-card{
+
+width:260px;
+
+height:300px;
+
+}
+
+.social{
+
+gap:18px;
+
+}
+
+.social a{
+
+font-size:22px;
+
+}
+
+}

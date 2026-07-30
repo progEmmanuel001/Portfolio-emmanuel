@@ -1,0 +1,131 @@
+/* ==========================================
+        GLOBAL BACKGROUND
+========================================== */
+
+.background{
+
+    position:fixed;
+    inset:0;
+    z-index:-100;
+    overflow:hidden;
+    background:#050816;
+
+}
+
+/* =========================
+        GRID
+========================= */
+
+.grid{
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+
+    background-size:50px 50px;
+
+    mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+}
+
+/* =========================
+        GLOW
+========================= */
+
+.glow{
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    border-radius:50%;
+
+    filter:blur(140px);
+
+    opacity:.25;
+
+}
+
+.glow.one{
+
+    background:#ff3300;
+
+    top:-250px;
+
+    left:-250px;
+
+}
+
+.glow.two{
+
+    background:#ff3300;
+
+    bottom:-250px;
+
+    right:-250px;
+
+}
+
+/* =========================
+        NOISE
+========================= */
+
+.noise{
+
+    position:absolute;
+    inset:0;
+
+    opacity:.05;
+
+    background-image:url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+
+}
+
+/* =========================
+        PARTICLES
+========================= */
+
+#particles{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:#ff3300;
+
+    opacity:.2;
+
+    animation:float linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(100vh);
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+}
+
+}
