@@ -293,7 +293,7 @@ color: #ffffff;
 }
 
 .glass-card {
-
+    overflow: hidden;
     width: 450px;
 
     height: 520px;
@@ -320,7 +320,7 @@ color: #ffffff;
 
 .glass-card img {
 
-    width: 80%;
+    width: 100%;
 
 }
 
@@ -341,9 +341,7 @@ color: #ffffff;
 
 }
 
-/* ===========================
-        LAPTOP
-=========================== */
+/*  LAPTOP */
 
 @media(max-width:1200px){
 
@@ -363,9 +361,7 @@ height:450px;
 
 }
 
-/* ===========================
-        TABLET
-=========================== */
+/*  TABLET */
 
 @media(max-width:992px){
 
@@ -429,9 +425,7 @@ font-size:52px;
 
 }
 
-/* ===========================
-        MOBILE
-=========================== */
+/*  MOBILE */
 
 @media(max-width:768px){
 
@@ -495,9 +489,7 @@ width:85%;
 
 }
 
-/* ===========================
-      SMALL PHONE
-=========================== */
+/*  SMALL PHONE */
 
 @media(max-width:480px){
 
