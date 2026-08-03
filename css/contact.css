@@ -79,7 +79,7 @@ align-items:center;
 
 gap:20px;
 
-padding:22px;
+    padding: 0 0 0 20px;
 
 background:rgba(255,255,255,.05);
 
@@ -103,10 +103,22 @@ border-color:#ff3300;
 
 .info-card i{
 
-font-size:28px;
+font-size:38px;
 
 color:#ff3300;
 
+}
+.info-card div{
+    padding: 25px 0px 0px 0px;
+}
+
+.info-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.info-card p {
+    font-weight: 500;
 }
 
 .contact-form{
@@ -184,7 +196,22 @@ transform:translateY(-5px);
 box-shadow:0 0 30px rgba(255,51,0,.5);
 
 }
+.available{
+    margin-top: 45px;
+    text-align: center;
+}
+.available span{
+    padding:16px 60px;
 
+border-radius:25px;
+
+background:rgba(255, 51, 0, 0.459);
+
+border:1px solid rgba(255,51,0,.25);
+
+font-size:14px;
+font-weight: 700;
+}
 .social-links{
 
 display:flex;

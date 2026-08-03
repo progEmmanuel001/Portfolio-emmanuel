@@ -294,11 +294,11 @@ color: #ffffff;
 
 .glass-card {
     overflow: hidden;
-    width: 450px;
+    width: 500px;
 
-    height: 520px;
+    height: 500px;
 
-    border-radius: 30px;
+    border-radius: 50%;
 
     background: rgba(255, 255, 255, .05);
 
@@ -483,7 +483,7 @@ height:350px;
 
 .glass-card img{
 
-width:85%;
+width:100%;
 
 }
 
@@ -513,7 +513,7 @@ font-size:16px;
 
 .glass-card{
 
-width:260px;
+width:300px;
 
 height:300px;
 
