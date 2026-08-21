@@ -88,12 +88,10 @@ From modern websites and web applications to AI, robotics, and educational techn
 </div>
 
 <div class="project-filter">
-
-<button class="active">All</button>
-<button>Web</button>
-<button>AI</button>
-<button>Robotics</button>
-
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="web">Web</button>
+    <button data-filter="pictoblox">Pictoblox</button>
+    <button data-filter="robotics">Robotics</button>
 </div>
 
 </section>
@@ -165,7 +163,7 @@ Github
 
 <!-- ================= CARD 1B ================= -->
 
-<div class="project-card">
+<div class="project-card" data-category="web">
 
 <div class="project-image">
 
@@ -225,7 +223,7 @@ Live Demo
 </div>
 <!-- ================= CARD 2 ================= -->
 
-<div class="project-card">
+<div class="project-card" data-category="pictoblox">
 
 <div class="project-image">
 
@@ -278,7 +276,7 @@ Live Demo
 
 <!-- ================= CARD 3 ================= -->
 
-<div class="project-card">
+<div class="project-card" data-category="pictoblox">
 
 <div class="project-image">
 
@@ -331,7 +329,7 @@ Live Demo
 
 <!-- ================= CARD 4 ================= -->
 
-<div class="project-card">
+<div class="project-card" data-category="pictoblox">
 
 <div class="project-image">
 
@@ -385,7 +383,7 @@ Live Demo
 
 <!-- ================= CARD 5 ================= -->
 
-<div class="project-card">
+<div class="project-card" data-category="robotics">
 
 <div class="project-image">
 
@@ -429,7 +427,7 @@ Autonomous robotic gate capable of detecting vehicles and opening automatically 
 
 <!-- ================= CARD 5 ================= -->
 
-<div class="project-card">
+<div class="project-card" data-category="robotics">
 
 <div class="project-image">
 
@@ -476,6 +474,7 @@ Autonomous robot capable of sorting colors and picking objects automatically usi
 <script src="./js/cursor.js"></script>
 <script src="./js/script.js"></script>
 <script src="js/navbar.js"></script>
+<script src="js/project.js"></script>
 
 </body>
 
