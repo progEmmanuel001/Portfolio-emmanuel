@@ -236,7 +236,7 @@ nav ul li a.active::after{
 
 .menu-btn.active span:nth-child(1){
 
-    transform:rotate(45deg) translate(7px,7px);
+    transform:rotate(45deg) translate(7px,13px);
 
 }
 
@@ -248,7 +248,7 @@ nav ul li a.active::after{
 
 .menu-btn.active span:nth-child(3){
 
-    transform:rotate(-45deg) translate(7px,-7px);
+    transform:rotate(-45deg) translate(7px,-13px);
 
 }
 
@@ -298,9 +298,10 @@ nav ul li a.active::after{
 
         right:-100%;
 
-        width:100%;
+        width:80%;
 
         height:100vh;
+        border-left: 1px solid #ff3300;
 
         background:#050816;
 

@@ -110,6 +110,7 @@ background:#ff3300;
 width:min(1200px,90%);
 
 margin:70px auto 120px;
+place-items: center;
 
 display:grid;
 
@@ -120,11 +121,8 @@ gap:35px;
 }
 
 /* project */
-/* ======================================
 
-PROJECT CARD
-
-====================================== */
+/* PROJECT CARD */
 
 .project-card{
 
@@ -132,7 +130,7 @@ background:rgba(255,255,255,.05);
 
 border:1px solid rgba(255,255,255,.08);
 
-border-radius:30px;
+border-radius:10px;
 
 overflow:hidden;
 
@@ -142,6 +140,7 @@ transition:.45s;
 
 transform-style:preserve-3d;
 
+max-width: 400px;
 }
 
 .project-card:hover{
@@ -152,8 +151,7 @@ translateY(-18px)
 
 rotateX(5deg)
 
-rotateY(-5deg);
-
+;
 box-shadow:0 25px 60px rgba(255,51,0,.25);
 
 }

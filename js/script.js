@@ -58,3 +58,17 @@ buttons.forEach(button=>{
     });
 
 });
+
+// whatsapp link
+document.getElementById('whatsapp-link').addEventListener('click', function(e) {
+    e.preventDefault(); // Stop the default link behavior
+    
+    const countryCode = "234";
+    const firstCode = "9114";
+    const phoneNum = "541210";
+    
+    const fullLink = "https://wa.me/" + countryCode + firstCode + phoneNum;
+    
+    // Open the WhatsApp chat in a new tab
+    window.open(fullLink, '_blank');
+});
