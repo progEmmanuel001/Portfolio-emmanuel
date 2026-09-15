@@ -1,0 +1,52 @@
+/* =========================================================
+   GLOBAL BACKGROUND
+   Fixed and clipped, so the glows can never widen the page.
+   ========================================================= */
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -100;
+  overflow: hidden;
+  background: var(--bg);
+  pointer-events: none;
+}
+
+.background .grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+  mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+}
+
+.background .glow {
+  position: absolute;
+  width: min(700px, 90vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.25;
+  background: var(--accent);
+}
+
+.background .glow.one {
+  top: -25%;
+  left: -25%;
+}
+
+.background .glow.two {
+  bottom: -25%;
+  right: -25%;
+  background: #6d28d9;
+}
+
+.background .noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}

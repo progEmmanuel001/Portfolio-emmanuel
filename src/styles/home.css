@@ -1,0 +1,116 @@
+/* =========================================================
+   HOME / HERO
+   ========================================================= */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(30px, 5vw, 70px);
+  padding: calc(var(--nav-h) + 60px) var(--gutter) 80px;
+}
+
+.hero-left {
+  width: min(760px, 100%);
+  min-width: 0;
+}
+
+.hero-hello {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin-bottom: 20px;
+  color: #ca8979;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 6.5vw, 4.4rem);
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero h2 {
+  font-size: clamp(1.3rem, 3.2vw, 2rem);
+  margin-bottom: 25px;
+  /* Reserves the line so the layout doesn't jump as the text types. */
+  min-height: 1.6em;
+  font-weight: 500;
+}
+
+.typing-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 4px;
+  background: var(--accent);
+  vertical-align: text-bottom;
+  animation: caret-blink 1s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-description {
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  line-height: 1.9;
+  color: #cbd5e1;
+  max-width: 62ch;
+}
+
+.hero-social {
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.hero-social a {
+  display: inline-flex;
+  font-size: 26px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.hero-social a:hover {
+  color: var(--accent);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-left {
+    width: 100%;
+  }
+
+  .hero-description {
+    margin-inline: auto;
+  }
+
+  .hero .btn-row,
+  .hero-social {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero .btn-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-social {
+    gap: 18px;
+  }
+
+  .hero-social a {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,46 @@
+/* =========================================================
+   CUSTOM CURSOR
+   Only mounted on devices with a real pointer (see Cursor.jsx),
+   so touch users keep normal tap behaviour.
+   ========================================================= */
+
+body.has-custom-cursor {
+  cursor: none;
+}
+
+body.has-custom-cursor a,
+body.has-custom-cursor button {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: var(--accent);
+}
+
+.cursor-outline {
+  width: 42px;
+  height: 42px;
+  margin: -21px 0 0 -21px;
+  border: 2px solid var(--accent);
+  transition: width 0.3s, height 0.3s, margin 0.3s, background 0.3s;
+}
+
+.cursor-outline.is-hovering {
+  width: 70px;
+  height: 70px;
+  margin: -35px 0 0 -35px;
+  background: rgba(255, 51, 0, 0.12);
+}

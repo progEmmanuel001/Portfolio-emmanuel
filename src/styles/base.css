@@ -1,0 +1,192 @@
+/* =========================================================
+   BASE — reset, tokens, shared elements
+   ========================================================= */
+
+:root {
+  --bg: #050816;
+  --accent: #ff3300;
+  --accent-deep: #a73316;
+  --text: #ffffff;
+  --text-muted: #c5c5c5;
+  --text-dim: #b8bcc8;
+
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-border: rgba(255, 255, 255, 0.08);
+
+  --nav-h: 85px;
+  --nav-h-sm: 75px;
+
+  /* Horizontal page gutter. One value, used everywhere, so no section
+     can quietly out-dent another and push the page sideways. */
+  --gutter: clamp(20px, 6vw, 110px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Belt and braces: nothing may create a horizontal scrollbar. */
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg);
+  font-family: Inter, sans-serif;
+  color: var(--text);
+  overflow-x: hidden;
+  /* Long unbroken words (URLs, "EMMANUEL?") wrap instead of overflowing. */
+  overflow-wrap: break-word;
+}
+
+/* Locks the page behind the mobile drawer without the layout jumping. */
+body.no-scroll {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font: inherit;
+}
+
+/* Keyboard focus stays visible everywhere. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 1.1;
+}
+
+/* =========================================================
+   SHARED BUTTONS
+   ========================================================= */
+
+.btn-row {
+  margin-top: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 38px;
+  border-radius: 50px;
+  font-weight: 700;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.primary {
+  background: var(--accent-deep);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.primary::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: var(--x, 50%);
+  top: var(--y, 50%);
+  background: rgba(252, 59, 0, 0.56);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.45s;
+  z-index: -1;
+}
+
+.primary:hover::before {
+  width: 320px;
+  height: 320px;
+}
+
+.secondary {
+  border: 2px solid var(--accent);
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.secondary:hover {
+  background: var(--accent);
+  color: #111;
+  font-weight: 600;
+}
+
+/* =========================================================
+   SECTION REVEAL
+   ========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Visible to screen readers only. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
