@@ -305,5 +305,8 @@ body {
         justify-content: center;
 
     }
-
+.available span {
+    font-size: 10px;
+    font-weight: 500;
+}
 }
