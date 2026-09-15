@@ -261,7 +261,7 @@ body {
 }
 
 .story-card p {
-
+    margin: 20px 0;
     color: #b8bcc8;
     line-height: 1.9;
 
