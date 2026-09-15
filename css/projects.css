@@ -30,7 +30,9 @@ letter-spacing:3px;
 margin-bottom:20px;
 
 }
-
+#react{
+color: #3024d8;
+}
 .projects-heading h1{
 
 font-size:70px;
@@ -245,7 +247,7 @@ background:rgba(255,51,0,.15);
 
 border:1px solid rgba(255,51,0,.25);
 
-font-size:14px;
+font-size:20px;
 
 }
 
