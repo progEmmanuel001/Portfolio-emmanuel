@@ -60,7 +60,7 @@
 /* ---------- Grid ---------- */
 
 .projects-grid {
-  margin: 70px 30px 70px;
+  margin: 70px 20px;
   padding: 0 var(--gutter);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));

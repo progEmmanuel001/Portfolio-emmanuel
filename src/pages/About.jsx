@@ -43,7 +43,7 @@ export default function About() {
           </p>
 
           <div className="btn-row">
-            <a href="/cv.pdf" className="primary" download>
+            <a href="https://1drv.ms/w/c/bc57e1901405df8f/IQAGPnN3kaEqQpwoaBl7EgC4AViDCzix8jkikKHt4ST1VU4?e=tPcSqX" className="primary" download>
               Download CV
             </a>
             <Link to="/contact" className="secondary">

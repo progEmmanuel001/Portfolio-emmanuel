@@ -1,0 +1,32 @@
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  padding: 20px var(--gutter) 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  border-top: 1px solid var(--surface-border);
+  background: none;
+}
+
+.footer-credit {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(14px, 2.2vw, 16px);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--text-muted);
+}
+
+.footer-credit span {
+  color: var(--accent);
+}
+
+.footer-copy {
+  font-size: clamp(12px, 2vw, 14px);
+  color: var(--text-dim);
+  opacity: 0.8;
+}
