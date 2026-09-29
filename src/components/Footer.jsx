@@ -4,7 +4,7 @@ export default function Footer() {
       <p className="footer-credit">
         Designed &amp; Built by <span>Udoh Emmanuel</span>
       </p>
-      <p className="footer-copy">&copy; 2026 All rights reserved</p>
+      <p className="footer-copy">&copy; 2025 All rights reserved</p>
     </footer>
   );
 }
